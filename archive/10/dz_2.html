@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #content {
+        margin: auto;
+        width: 400px;
+        height: 200px;
+        background: #cfcbcb;
+        text-align: center;
+        padding-top: 60px;
+        border-radius: 10px;
+        border: 2px solid black;
+      }
+      .myDiv {
+        width: 200px;
+        float: left;
+      }
+      .myDiv input {
+        border-radius: 5px;
+      }
+      #sbmt {
+        margin-top: 30px;
+        width: 80px;
+        height: 30px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content">
+      <form action="" method="get" onsubmit="return check()">
+        <div class="myDiv">
+          Your email <br />
+          <input type="email" name="email" id="email" />
+        </div>
+        <div class="myDiv">
+          Your login <br />
+          <input type="text" name="login" id="login" />
+        </div>
+        <div class="myDiv">
+          Your password <br />
+          <input type="password" id="pas_1" />
+        </div>
+        <div class="myDiv">
+          Repeat password <br />
+          <input type="password" id="pas_2" />
+        </div>
+        <input type="submit" value="Sing Up" id="sbmt" />
+      </form>
+    </div>
+    <script src="dz_2.js"></script>
+  </body>
+</html>

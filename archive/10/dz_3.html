@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #content {
+        width: 500px;
+        height: 400px;
+        margin: auto;
+        text-align: center;
+        background: #cfc9c9;
+        border-radius: 10px;
+        padding-top: 10px;
+      }
+      .myDiv {
+        width: 250px;
+        float: left;
+        height: 50px;
+      }
+      #inputCheck {
+        width: 500px;
+      }
+      #sbm {
+        width: 260px;
+        height: 30px;
+        border-radius: 5px;
+      }
+      #newForm {
+        width: 500px;
+        margin: auto;
+        background: #cfc9c9;
+        margin-top: 20px;
+        display: none;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+      table,
+      td,
+      th {
+        border: 1px solid #595959;
+      }
+      td,
+      th {
+        padding: 3px;
+        width: 30px;
+        height: 25px;
+      }
+      th {
+        background-color: #7accee !important;
+      }
+      #name1,
+      #name2,
+      #date,
+      #select1,
+      #select2 {
+        width: 220px;
+        height: 20px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content">
+      <h1>Form</h1>
+      <form action="" method="get" id="myForm">
+        <div class="myDiv">
+          Firstname <br /><input type="text" name="name" id="name1" />
+        </div>
+        <div class="myDiv">
+          Lastname <br /><input type="text" name="name" id="name2" />
+        </div>
+        <br /><br />
+        <div class="myDiv">
+          Birthday <br /><input type="date" name="date" id="date" />
+        </div>
+        <div class="myDiv">
+          Gender: <br /><input type="radio" value="Male" name="gr" />Male
+          <input type="radio" value="Female" name="gr" />Female
+        </div>
+        <div class="myDiv">
+          Country <br /><select name="country" id="select1">
+            <option value="Ukraine">Ukraine</option>
+            <option value="Poland">Poland</option>
+            <option value="France">France</option>
+          </select>
+        </div>
+        <div class="myDiv">
+          City <br /><select name="city" id="select2">
+            <option value="Dnepr">Dnepr</option>
+            <option value="Kiev">Kiev</option>
+            <option value="Lviv">Lviv</option>
+          </select>
+        </div>
+        <div class="myDiv" id="inputCheck">
+          Skills:
+          <label for="html">HTML<input type="checkbox" value="HTML" /></label>
+          <label for="css">| CSS<input type="checkbox" value="CSS" /></label>
+          <label for="js">| JS<input type="checkbox" value="JS" /></label>
+          <label for="php">| PHP<input type="checkbox" value="PHP" /></label>
+          <label for="c++">| C++<input type="checkbox" value="C++" /></label>
+        </div>
+        <br />
+        <button type="submit" id="sbm">Save</button>
+      </form>
+    </div>
+    <div id="newForm">
+      <table>
+        <tbody>
+          <tr>
+            <td>Firstname</td>
+            <td id="firstname"></td>
+          </tr>
+          <tr>
+            <td>Lastname</td>
+            <td id="lastname"></td>
+          </tr>
+          <tr>
+            <td>Birthday</td>
+            <td id="birthday"></td>
+          </tr>
+          <tr>
+            <td>Gender</td>
+            <td id="gender"></td>
+          </tr>
+          <tr>
+            <td>Country</td>
+            <td id="country"></td>
+          </tr>
+          <tr>
+            <td>City</td>
+            <td id="city"></td>
+          </tr>
+          <tr>
+            <td>Skills</td>
+            <td id="skills"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="dz_3.js"></script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <h2>Add new contact</h2>
+    <form action="" method="GET" id="myForm" onsubmit="return checkForm()">
+      <b>Name</b>
+      <input
+        type="text"
+        placeholder="Enter name"
+        name="name"
+        required
+        id="name"
+      /><br /><br />
+      <input type="submit" value="Send" onclick="checkForm()" />
+      <input
+        type="button"
+        value="One more phone"
+        onclick="addClick()"
+      /><br /><br />
+      Phone number
+      <input
+        type="text"
+        name="phone"
+        id="ph"
+        placeholder="Enter phone number"
+      />
+      Phone type
+      <select name="type">
+        <option value="1">Home</option>
+        <option value="2">Work</option>
+        <option value="3">Cellular</option>
+      </select>
+      Priority <input type="radio" name="main" value="1" checked />
+    </form>
+    <script src="kl.work.js"></script>
+  </body>
+</html>

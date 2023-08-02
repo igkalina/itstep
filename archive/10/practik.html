@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .hvr-float-shadow {
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        position: relative;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-property: transform;
+        transition-property: transform;
+      }
+      .hvr-float-shadow:before {
+        pointer-events: none;
+        position: absolute;
+        z-index: -1;
+        content: "";
+        top: 100%;
+        left: 5%;
+        height: 10px;
+        width: 90%;
+        opacity: 0;
+        background: -webkit-radial-gradient(
+          center,
+          ellipse,
+          rgba(0, 0, 0, 0.35) 0%,
+          rgba(0, 0, 0, 0) 80%
+        );
+        background: radial-gradient(
+          ellipse at center,
+          rgba(0, 0, 0, 0.35) 0%,
+          rgba(0, 0, 0, 0) 80%
+        );
+        /* W3C */
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-property: transform, opacity;
+        transition-property: transform, opacity;
+      }
+      .hvr-float-shadow:hover,
+      .hvr-float-shadow:focus,
+      .hvr-float-shadow:active {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+        /* move the element up by 5px */
+      }
+      .hvr-float-shadow:hover:before,
+      .hvr-float-shadow:focus:before,
+      .hvr-float-shadow:active:before {
+        opacity: 1;
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+        /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+      }
+
+      div {
+        width: 300px;
+        background: #d4b164;
+        text-align: center;
+        padding-top: 10px;
+        border-radius: 10px;
+        margin: auto;
+        border: 1px solid black;
+      }
+      .inp {
+        height: 50px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-size: 30px;
+        width: 90%;
+      }
+      #sumb {
+        margin-bottom: 30px;
+        width: 130px;
+        height: 30px;
+        border-radius: 10px;
+        color: #ffffff;
+        background: #000000;
+      }
+      p {
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+      }
+      h1 {
+        font-size: 50px;
+      }
+      input {
+        background: #ffeec8;
+        font-size: 20px;
+      }
+      p:hover {
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <form action="" method="get" onsubmit="return check()">
+        <h1 class="hvr-float-shadow">Mystat</h1>
+        <p>Login</p>
+        <input type="text" name="login" id="lg" class="inp" />
+        <p>Password</p>
+        <input type="password" name="pass" id="ps" class="inp" />
+        <input type="submit" value="Login" onclick="check()" id="sumb" />
+      </form>
+    </div>
+    <script src="practik.js"></script>
+  </body>
+</html>
